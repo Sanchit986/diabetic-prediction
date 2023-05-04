@@ -53,7 +53,7 @@ def main():
 
 
         images = [im1,im2,im3,im4,im5,im6]
-        time_interval = 8
+        time_interval = 5
 
         # loop through the list of images
         for image_url in images:
