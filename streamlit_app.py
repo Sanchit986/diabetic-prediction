@@ -5,7 +5,7 @@ import sklearn
 import time
 
 # loading the saved model
-loaded_model = pickle.load(open("C:\\Users\\KIIT\\PycharmProjects\\minorproject\\trained_model.sav", 'rb'))
+loaded_model = pickle.load(open("trained_model.sav", 'rb'))
 
 
 # creating a function for Prediction
@@ -35,12 +35,12 @@ def main():
     if(var=="HOME"):
 
 
-        image1_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diabetic_NEW.jpg"
-        image2_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\dia.jpg"
-        image3_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diab4.jpg"
-        image4_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\Diabete3.jpg"
-        image5_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diabetes-symptoms-infographic-free-vector.jpg"
-        image6_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diabetics2.jpg"
+        image1_path = "diabetic_NEW.jpg"
+        image2_path = "dia.jpg"
+        image3_path = "diab4.jpg"
+        image4_path = "Diabete3.jpg"
+        image5_path = "diabetes-symptoms-infographic-free-vector.jpg"
+        image6_path = "diabetics2.jpg"
         
         im1 = st.image(image1_path, caption="Image 1", width=800)
         im2 = st.image(image2_path, caption="Image 2", width=800)
