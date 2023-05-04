@@ -1,7 +1,7 @@
 import numpy as np
 import pickle
 import streamlit as st
-import cv2
+
 import time
 
 # loading the saved model
