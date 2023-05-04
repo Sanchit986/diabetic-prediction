@@ -1,7 +1,7 @@
 import numpy as np
 import pickle
 import streamlit as st
-import cv2
+import sklearn
 import time
 
 # loading the saved model
@@ -33,25 +33,24 @@ def main():
 
     var = st.sidebar.radio("Choose the options", ["HOME", "DIABETIC PREDICTION", "CONTACT US"])
     if(var=="HOME"):
-        img = cv2.imread("C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diabetic_NEW.jpg",-1)
-        img2=cv2.imread("C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\dia.jpg")
-        img3=cv2.imread("C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diab4.jpg")
-        img4=cv2.imread("C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\Diabete3.jpg")
-        img5=cv2.imread("C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diabetes-symptoms-infographic-free-vector.jpg")
-        img6=cv2.imread("C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diabetics2.jpg")
 
-        image_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        image_rgb2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
-        image_rgb3 = cv2.cvtColor(img3, cv2.COLOR_BGR2RGB)
-        image_rgb4 = cv2.cvtColor(img4, cv2.COLOR_BGR2RGB)
-        image_rgb5 = cv2.cvtColor(img5, cv2.COLOR_BGR2RGB)
-        image_rgb6 = cv2.cvtColor(img6, cv2.COLOR_BGR2RGB)
-        im1 = cv2.resize(image_rgb, (800, 400))
-        im2 = cv2.resize(image_rgb2, (800, 400))
-        im3 = cv2.resize(image_rgb3, (800, 400))
-        im4 = cv2.resize(image_rgb4, (800, 400))
-        im5 = cv2.resize(image_rgb5, (800, 400))
-        im6 = cv2.resize(image_rgb6, (800, 400))
+
+        image1_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diabetic_NEW.jpg"
+        image2_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\dia.jpg"
+        image3_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diab4.jpg"
+        image4_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\Diabete3.jpg"
+        image5_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diabetes-symptoms-infographic-free-vector.jpg"
+        image6_path = "C:\\Users\\KIIT\\PycharmProjects\\minorproject\\images\\diabetics2.jpg"
+        
+        im1 = st.image(image1_path, caption="Image 1", width=800)
+        im2 = st.image(image2_path, caption="Image 2", width=800)
+        im3 = st.image(image3_path, caption="Image 3", width=800)
+        im4 = st.image(image4_path, caption="Image 4", width=800)
+        im5 = st.image(image5_path, caption="Image 5", width=800)
+        im6 = st.image(image6_path, caption="Image 6", width=800)
+
+
+
 
         images = [im1,im2,im3,im4,im5,im6]
         time_interval = 8
